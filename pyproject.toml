@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "markdown_classes"
+version = "0.1.0"
+description = ""
+authors = ["Tom Waterman"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+markdown = "^3.6"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."markdown.extensions"]
+classes = "markdown_classes.core:MarkdownClassesExtension"
